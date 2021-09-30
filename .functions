@@ -40,7 +40,13 @@ function o() {
 # Kills process at port
 function kp()
     {
-        kill -9 $(lsof -t -i:"$1");
+      PROCESS=$(lsof -t -i:"$1");
+      if [[ -z $PROCESS ]];
+      then
+        echo "No process found at port $1"
+      else
+        kill -9 "$PROCESS";
+      fi
     }
 
 # TODO make sure this works for zsh
@@ -72,23 +78,3 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
-
-# From http://dotfiles.org/~_why/.zshrc
-# Sets the window title nicely no matter where you are
-function title() {
-  # escape '%' chars in $1, make nonprintables visible
-  a=${(V)1//\%/\%\%}
-
-  # Truncate command, and join lines.
-  a=$(print -Pn "%40>...>$a" | tr -d "\n")
-
-  case $TERM in
-  screen)
-    print -Pn "\ek$a:$3\e\\" # screen title (in ^A")
-    ;;
-  xterm*|rxvt)
-    print -Pn "\e]2;$2\a" # plain xterm title ($3 for pwd)
-    ;;
-  esac
-}
-
