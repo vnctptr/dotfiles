@@ -2,7 +2,7 @@
 
 cd "$(dirname "${(%):-%N}")";
 
-#git pull origin main;
+git pull
 
 function doIt() {
 
@@ -13,13 +13,13 @@ function doIt() {
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude ".zshrc" \
+		--exclude ".idea/" \
 		-avh --no-perms . ~;
 
 	# Make sure dotfilesrc is being sourced in zshrc (if it's not already being sourced)
 	if ! grep --quiet ".dotfilesrc" ~/.zshrc
 	then
-	  echo "# This line was added added by dotfiles\nsource $HOME/.dotfilesrc
-" >> ~/.zshrc;
+	  echo "# This line was added added by dotfiles\nsource $HOME/.dotfilesrc" >> ~/.zshrc;
   fi
 
   # Add zshrc to dotfiles repository
