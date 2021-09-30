@@ -20,7 +20,11 @@ set -- -f; source bootstrap.sh
 
 ## Modifying .zshrc
 
-The bootstrapper will add `source .dotfiles` (if not already present) to your `.zshrc` and store a copy of your `.zshrc` in the repository. 
+The bootstrapper will add the following line to your `.zshrc` (if not already present):
+```bash
+source $HOME/.dotfilesrc
+``` 
+It will also store a copy of your `.zshrc` in the repository. It will NOT copy `.zsrhc` from the repository to your home folder. 
 
 ## Customization
 
