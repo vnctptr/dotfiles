@@ -18,7 +18,7 @@ Alternatively, to update while avoiding the confirmation prompt:
 set -- -f; source bootstrap.sh
 ```
 
-## Modifying .zshrc
+## Saving .zshrc
 
 The bootstrapper will add the following line to your `.zshrc` (if not already present):
 ```bash
