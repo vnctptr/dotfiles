@@ -41,6 +41,7 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 
 ## Thanks to…
 
-* Bootstrapper based on [Mathias Bynens'](https://mathiasbynens.be/) [bootstrapper](https://github.com/mathiasbynens/dotfiles)
 * [Matt Stauffer](https://mattstauffer.com/) and his [ohmyzsh-dotflies](https://github.com/mattstauffer/ohmyzsh-dotfiles)
 * [Zach Holman](http://zachholman.com) and his [dotfiles repo](https://github.com/holman/dotfiles)
+
+Bootstrapper based on [Mathias Bynens'](https://mathiasbynens.be/) [bootstrapper](https://github.com/mathiasbynens/dotfiles).
