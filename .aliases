@@ -110,7 +110,7 @@ alias path='echo -e ${PATH//:/\\n}'
 # More verbose fileutils
 alias cp='nocorrect cp -iv' # -i to prompt for every file
 alias mv='nocorrect mv -iv'
-alias rm='nocorrect rm -Iv' # -I to prompt when more than 3 files
+alias rm='nocorrect rm -Iv' # -I to prompt when more than 3 files # TODO: Make MacOS compatible
 alias rmdir='rmdir -v'
 alias chmod='chmod -v'
 alias chown='chown -v'
