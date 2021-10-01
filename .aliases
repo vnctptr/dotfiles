@@ -41,7 +41,7 @@ alias ls="ls -GFh ${colorflag}"
 alias ll="ls -alF ${colorflag}"
 
 # Also list hidden files
-alias la='ls -A'
+alias la='ls -a'
 
 alias l='ls -CF'
 
