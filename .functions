@@ -34,10 +34,16 @@ function fs() {
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
 function o() {
-	if [ $# -eq 0 ]; then
-		xdg-open .;
+  if [[ $OSTYPE == 'darwin'* ]]; then
+    command='open'
+  else
+    command='xdg-open'
+  fi
+
+  if [ $# -eq 0 ]; then
+		$command .;
 	else
-		xdg-open "$@";
+		$command "$@";
 	fi;
 }
 
