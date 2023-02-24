@@ -23,6 +23,7 @@ function doIt() {
   fi
 
   # Add zshrc to dotfiles repository
+	cp ~/.zshrc ~/.zshrc_dotfiles_copy
 	rsync ~/.zshrc .;
 
 	source ~/.zshrc;
