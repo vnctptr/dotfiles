@@ -10,9 +10,3 @@ export PATH=~/.local/bin:$PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias fzf='find . type f | fzf'
-
-# FASD
-# Searches for file using fasd and and opens it using VSCode
-# https://github.com/clvv/fasd
-eval "$(fasd --init auto)"
-alias fcode='f -e code'
