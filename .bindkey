@@ -61,10 +61,6 @@ bindkey '^[`' _git_wtf
 bindkey '^[^M' autosuggest-execute
 bindkey '^[^J' autosuggest-execute
 
-# Disable the capslock key and map it to escape
-setxkbmap -option caps:backspace
-
-
 # TODO: these are bindkey candidates form another dotfile repository
 #bindkey '^[^[[D' backward-word
 #bindkey '^[^[[C' forward-word
