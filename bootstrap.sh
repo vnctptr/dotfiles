@@ -22,10 +22,6 @@ function doIt() {
 	  echo "# This line was added added by dotfiles\nsource $HOME/.dotfilesrc" >> ~/.zshrc;
   fi
 
-  # Add zshrc to dotfiles repository
-	cp ~/.zshrc ~/.zshrc_dotfiles_copy
-	rsync ~/.zshrc .;
-
 	source ~/.zshrc;
 }
 
